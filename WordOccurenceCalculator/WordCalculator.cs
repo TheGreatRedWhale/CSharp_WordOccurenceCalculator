@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WordOccurenceCalculator
 {
 
-    class WordCalculator
+    public class WordCalculator
     {
         /**
          * <summary>
