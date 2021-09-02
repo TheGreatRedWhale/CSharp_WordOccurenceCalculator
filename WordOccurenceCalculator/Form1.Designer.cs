@@ -30,6 +30,7 @@
         {
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.calculateButton = new System.Windows.Forms.Button();
+            this.resultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // inputTextBox
@@ -49,11 +50,21 @@
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.Location = new System.Drawing.Point(97, 193);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(89, 13);
+            this.resultLabel.TabIndex = 2;
+            this.resultLabel.Text = "RESULT_LABEL";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.inputTextBox);
             this.Name = "Form1";
@@ -67,6 +78,7 @@
 
         private System.Windows.Forms.TextBox inputTextBox;
         private System.Windows.Forms.Button calculateButton;
+        private System.Windows.Forms.Label resultLabel;
     }
 }
 
