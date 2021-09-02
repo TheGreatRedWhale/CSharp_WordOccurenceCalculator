@@ -38,27 +38,28 @@
             this.inputTextBox.Location = new System.Drawing.Point(12, 12);
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(248, 142);
+            this.inputTextBox.Size = new System.Drawing.Size(649, 366);
             this.inputTextBox.TabIndex = 0;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(69, 290);
+            this.calculateButton.Font = new System.Drawing.Font("Courier New", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateButton.Location = new System.Drawing.Point(12, 384);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(75, 23);
+            this.calculateButton.Size = new System.Drawing.Size(649, 54);
             this.calculateButton.TabIndex = 1;
-            this.calculateButton.Text = "Calculate";
+            this.calculateButton.Text = "CALCULATE";
             this.calculateButton.UseVisualStyleBackColor = true;
-            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            this.calculateButton.Click += new System.EventHandler(this.calculate);
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(97, 193);
+            this.resultLabel.Location = new System.Drawing.Point(667, 15);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(89, 13);
+            this.resultLabel.Size = new System.Drawing.Size(97, 13);
             this.resultLabel.TabIndex = 2;
-            this.resultLabel.Text = "RESULT_LABEL";
+            this.resultLabel.Text = "Word Occurences:";
             // 
             // Form1
             // 
@@ -69,7 +70,7 @@
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.inputTextBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Word Occurence Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,10 +19,14 @@ namespace WordOccurenceCalculator
             InitializeComponent();
         }
 
-        private void calculateButton_Click(object sender, EventArgs e)
+        private void calculate(object sender, EventArgs e)
         {
             List<string> wordsList = new List<string>();
             wordsList = Regex.Split(inputTextBox.Text, "[^a-zA-Z']+").ToList<string>();
+            if (wordsList[wordsList.Count-1].Equals(""))
+            {
+                wordsList.RemoveAt(wordsList.Count - 1);
+            }
             List<WordOccurrence> woList = new List<WordOccurrence>();
 
             string outputString = "";
@@ -32,7 +36,8 @@ namespace WordOccurenceCalculator
                 outputString += (woList[i] + "\n");
             }
             outputString = outputString.Substring(0, outputString.Length - 1);
-                MessageBox.Show(outputString);
+            resultLabel.Text = outputString;
+            // inputTextBox.Text = null;
         }
     }
 }
