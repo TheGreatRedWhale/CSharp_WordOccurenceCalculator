@@ -28,16 +28,22 @@ namespace WordOccurenceCalculator
                 wordsList.RemoveAt(wordsList.Count - 1);
             }
             List<WordOccurrence> woList = new List<WordOccurrence>();
-
-            string outputString = "";
-            woList = WordCalculator.CalculateOccurrences(wordsList);
-            for (int i = 0; i < woList.Count; i++)
+            try
             {
-                outputString += (woList[i] + "\n");
+
+                string outputString = "";
+                woList = WordCalculator.CalculateOccurrences(wordsList);
+                for (int i = 0; i < woList.Count; i++)
+                {
+                    outputString += (woList[i] + "\n");
+                }
+                outputString = outputString.Substring(0, outputString.Length - 1);
+                resultLabel.Text = outputString;
             }
-            outputString = outputString.Substring(0, outputString.Length - 1);
-            resultLabel.Text = outputString;
-            // inputTextBox.Text = null;
+            catch (ArgumentException)
+            {
+                resultLabel.Text = "There are no words\nin the textbox!";
+            }
         }
     }
 }
