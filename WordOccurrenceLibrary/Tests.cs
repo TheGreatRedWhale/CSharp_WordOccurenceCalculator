@@ -37,5 +37,13 @@ namespace WordOccurrenceLibrary
             // Compare with the expected result
             Assert.IsTrue(expected.Equals(actual));
         }
+
+        [Test]
+        public void CalculateOccurrencesShouldThrowException()
+        {
+            // Tests to ensure that ArgumentException is thrown when calculator is provided with a null argument.
+            Assert.Throws<ArgumentException>(
+                delegate { WordCalculator.CalculateOccurrences(null); });
+        }
     }
 }
