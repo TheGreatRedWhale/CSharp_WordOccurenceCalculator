@@ -25,15 +25,7 @@ namespace WordOccurenceCalculator
         
         override public string ToString()
         {
-            string output = Word + ":";
-            int stringLength = output.Length;
-            if (stringLength < 11)
-            {
-                stringLength -= 8;
-                output += "\t";
-            }
-            output += ("\t" + Count.ToString());
-            return output;
+            return (Word + ": " + Count);
         }
     }
 }
