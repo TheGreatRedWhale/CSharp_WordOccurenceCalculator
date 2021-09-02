@@ -10,5 +10,17 @@ namespace WordOccurenceCalculator
     {
         public string Word { get; set; }
         public int Count { get; set; }
+
+        public WordOccurrence(string word, int count)
+        {
+            Word = word;
+            Count = count;
+        }
+
+        public WordOccurrence(string word)
+        {
+            Word = word;
+            Count = 1;
+        }
     }
 }
