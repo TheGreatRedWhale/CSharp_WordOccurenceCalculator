@@ -8,5 +8,9 @@ namespace WordOccurenceCalculator
 {
     class WordCalculator
     {
+        static List<WordOccurrence> CalculateOccurrences(List<string> occurences)
+        {
+            return null; //TODO
+        }
     }
 }
