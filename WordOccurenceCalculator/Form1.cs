@@ -29,8 +29,9 @@ namespace WordOccurenceCalculator
             woList = WordCalculator.CalculateOccurrences(wordsList);
             for (int i = 0; i < woList.Count; i++)
             {
-                outputString += ("WOCC: " + woList[i].Word + "\t" + woList[i].Count.ToString() + "\n\n");
+                outputString += (woList[i] + "\n");
             }
+            outputString = outputString.Substring(0, outputString.Length - 1);
                 MessageBox.Show(outputString);
         }
     }

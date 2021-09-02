@@ -29,7 +29,13 @@ namespace WordOccurenceCalculator
             {
                 // Convert all strings to lowercase and then capitalize the first letter to avoid erroneous duplicates based on casing.
                 wordsList[i] = wordsList[i].ToLower();
-                wordsList[i] = char.ToUpper(wordsList[i][0]) + wordsList[i].Substring(1);
+                if (wordsList[i].Length > 1)
+                {
+                    wordsList[i] = char.ToUpper(wordsList[i][0]) + wordsList[i].Substring(1);
+                } else
+                {
+                    wordsList[i] = wordsList[i].ToUpper();
+                }
                 try
                 {
                     woDict.Add(wordsList[i], 0);
